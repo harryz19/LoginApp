@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/cdv"
+        android:fontFamily="@font/archivo_black"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="LOGIN"
+        android:textColor="#FFFFFF"
+        android:textSize="35sp"
+        android:textStyle="bold"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp"
+        app:cardUseCompatPadding="false"
+        android:layout_centerInParent="true"
+        android:layout_marginHorizontal="20dp"
+        android:id="@+id/cdv">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/il_userid"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:startIconDrawable="@drawable/user"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="5dp"
+                app:counterMaxLength="10"
+                app:endIconMode="clear_text"
+                app:boxStrokeColor="#2196F3"
+                app:hintTextColor="#2196F3">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:hint="Username"
+                    android:id="@+id/et_userid"
+                    android:maxLength="10"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/il_pass"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:startIconDrawable="@drawable/pass"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="5dp"
+                app:endIconMode="password_toggle"
+                app:boxStrokeColor="#2196F3"
+                app:hintTextColor="#2196F3">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:hint="Password"
+                    android:id="@+id/et_pass"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#104F81"
+        android:text="LOGIN"
+        android:textSize="25sp"
+        android:id="@+id/btn_logindet"
+        android:layout_below="@id/cdv"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>
